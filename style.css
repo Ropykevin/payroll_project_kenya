@@ -2,7 +2,7 @@ body {
   position: relative;
   background-image: url(aserts/money.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   font-weight: bolder;
 }
 
