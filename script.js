@@ -55,8 +55,8 @@ function link_nssf_nhdf_total() {
   document.getElementById("total_nssf_nhdf").innerHTML = total;
 }
 
-function calculate_taxable_income(gross, total) {
-  let total_income = gross-total-nhdf;
+function calculate_taxable_income(gross,total) {
+  let total_income = gross-nssf-nhdf;
   return total_income
 }
 function link_taxable_income() {
