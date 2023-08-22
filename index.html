@@ -16,10 +16,10 @@
 
         <hr>
         <form id="anchor" action="">
-            <label for="gross-salary">Basic Salary:</label>
+            <label class="lab" for="gross-salary">Basic Salary:</label>
             <input id="basic_salary" style="height: 50px;font-size: 15px; width: 100px;" class="btn" type="number"
                 placeholder="ksh" id="basic_salary" name="Basic Salary">
-            <label for="payee-rate">Benefit:</label>
+            <label class="lab" for="payee-rate">Benefit:</label>
             <input itemid="benefit" style="height: 50px; font-size: 15px; width: 100px;; " type="number"
                 placeholder="ksh" id="benefit" name="Benefit">
             <button id="Calculate"
@@ -28,7 +28,7 @@
                 Calculate</button>
         </form>
         <p style="color: red;" id="error"></p>
-        <p style="color: greenyellow; position: absolute;top: 30%;" id="succes"></p>
+        <p style="color: green; position: absolute;" id="succes"></p>
         <table id="table" border="1">
             <thead>
                 <tr>

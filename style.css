@@ -78,6 +78,9 @@ form {
 
 
 }
+.lab{
+  font-size: 20px;
+}
 
 /* 
 button {
@@ -116,6 +119,6 @@ span {
 
 p {
   position: absolute;
-  top: 25%;
-  left: 45%;
+  top: 15%;
+  left: 40%;
 }
