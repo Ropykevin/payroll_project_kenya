@@ -55,7 +55,7 @@ function link_nssf_nhdf_total() {
   document.getElementById("total_nssf_nhdf").innerHTML = total;
 }
 
-function calculate_taxable_income(gross, total,nhdf) {
+function calculate_taxable_income(gross, total) {
   let total_income = gross-total-nhdf;
   return total_income
 }
@@ -135,16 +135,16 @@ function link_nhif() {
 function find_payee(taxable_income, personal_relief = 2400) {
   if (taxable_income <= 24000) {
     grosspayee = 24000 * 0.1;
-    netpayee = grosspayee - personal_relief;
+    netpayee = Math.round(grosspayee - personal_relief);
   } else if ((taxable_income <= 32333)) {
     grosspayee = (taxable_income - 24000) * 0.25 + 2400;
-    netpayee = grosspayee - personal_relief;
+    netpayee = Math.round(grosspayee - personal_relief);
   } else if (taxable_income <= 500000) {
     grosspayee = (taxable_income - 32333) * 0.3 + 4483.25;
-    netpayee = grosspayee - personal_relief;
+    netpayee = Math.round(grosspayee - personal_relief);
   } else if (taxable_income > 500000) {
     grosspayee = (taxable_income - 80000) * 0.35 + 4483.25;
-    netpayee = grosspayee - personal_relief;
+    netpayee = Math.round(grosspayee - personal_relief);
   } else {
     netpayee = 0;
   }

@@ -2,7 +2,7 @@ body {
   position: relative;
   background-image: url(aserts/money.jpg);
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   font-weight: bolder;
 }
 
@@ -34,7 +34,7 @@ table {
 @media all and (max-width:700px) {
   body {
       background-image: url(aserts/money.jpg);
-      background-repeat: repeat;
+      background-repeat: no-repeat;
   }
 
   form {
