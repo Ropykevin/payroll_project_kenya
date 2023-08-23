@@ -132,23 +132,45 @@ function link_nhif() {
 // }
 
 
+
 function find_payee(taxable_income, personal_relief = 2400) {
-  if (taxable_income <= 24000) {
-    grosspayee = 24000 * 0.1;
-    netpayee = Math.round(grosspayee - personal_relief);
-  } else if ((taxable_income <= 32333)) {
-    grosspayee = (taxable_income - 24000) * 0.25 + 2400;
-    netpayee = Math.round(grosspayee - personal_relief);
-  } else if (taxable_income <= 500000) {
-    grosspayee = (taxable_income - 32333) * 0.3 + 4483.25;
-    netpayee = Math.round(grosspayee - personal_relief);
-  } else if (taxable_income > 500000) {
-    grosspayee = (taxable_income - 80000) * 0.35 + 4483.25;
-    netpayee = Math.round(grosspayee - personal_relief);
-  } else {
-    netpayee = 0;
+  if(taxable_income<=24000){
+    grosspayee = 24000*0.1
+    netpayee = grosspayee-personal_relief
   }
-  return netpayee;
+  else if(taxable_income<=32333){
+    grosspayee= ((taxable_income-24000)*0.25)+2400
+    netpayee= grosspayee-personal_relief
+  }
+  else if(taxable_income<=500000){
+    grosspayee=((taxable_income-32333)*0.3)+4483.25
+    netpayee=grosspayee -personal_relief
+  }
+  else if(taxable_income<=800000){
+    grosspayee=(taxable_income-500000)*0.325+144783.35+2400
+    netpayee=grosspayee -personal_relief
+  }
+  else {
+    grosspayee=((taxable_income-800000)*0.35)+242283.35+2400
+    netpayee=grosspayee-personal_relief
+  }
+  return netpayee
+  // if (taxable_income <= 24000) {
+  //   grosspayee = 24000 * 0.1;
+  //   netpayee = (grosspayee - personal_relief);
+  // } else if ((taxable_income <= 32333)) {
+  //   grosspayee = (taxable_income - 24000) * 0.25 + 2400;
+  //   netpayee = (grosspayee - personal_relief);
+  // } else if (taxable_income <= 500000) {
+  //   grosspayee = (taxable_income - 32333) * 0.3 + 4483.25;
+  //   netpayee = (grosspayee - personal_relief);
+  // } else if (taxable_income > 500000) {
+  //   grosspayee = (taxable_income - 80000) * 0.35 + 4483.25;
+  //   netpayee = (grosspayee - personal_relief);
+  // } else {
+  //   netpayee = 0;
+  // }
+  // return netpayee.toFixed(2);
 }
 
 function link_payee() {
